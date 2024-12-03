@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="images/TCD.png" rel="icon"/>
+    <link rel="stylesheet" href="styles.css" />
+    <title>YetrackerV2</title>
+  </head>
+  <body>
+    <div class="toprow red">
+      <div class="toplinfo otherorange center-content">
+        <img src="images/kanyeandbear.webp" class="hiddenimage" />
+        <h1>YeTrackerV2</h1>
+      </div>
+      <div class="topmimage otherblue center-content">
+        <img
+          src="images/kanyefull.png" class="clickable" id="KF" onclick="ToggleBB()"/>
+      </div>
+      <div class="toprimage otherorange center-content">
+        <img src="images/pingpong.png" class="clickable" id="pingPong" onclick="hiddenroom()"/>
+        
+      </div>
+    </div>
+    <div class="bottomrow blue">
+      <div class="album red center-content">
+        <div class="acoverbig tcdbrown center-content">
+          <img src="images/TCD.png" class="tcdborder" />
+        </div>
+        <div
+          class="ainfo tcdbrown clickable center-content"
+          id="TCD"
+          onclick="TCDSongs()"
+        >
+          <p1>
+            "The College Dropout" is Kanye's first studio album, released on
+            February 10, 2004. It not only catapulted Kanye onto the music scene
+            with numerous great hits but also marked an exceptional start for
+            the young artist. This album also set the stage for Kanye's trilogy
+            of college-related releases, showcasing his unique blend of
+            innovative production and insightful lyricism that would come to
+            define his iconic career.
+          </p1>
+        </div>
+      </div>
+      <div class="song red hidden" id="weDontCare">
+        <div class="acoversmall tcdbrown center-content">
+          <img src="images/TCD.png" />
+        </div>
+        <div class="songinfo tcdbrown centertext clickable" id="WDCinfo" onclick="toggleWDC()" ">
+          <p2> We Don't Care</p2>
+          <p3>3:59</p3>
+        </div>
+      </div>
+      <div class="song red hidden" id="slowJamz">
+        <div class="acoversmall tcdbrown center-content">
+          <img src="images/TCD.png" />
+        </div>
+        <div class="songinfo tcdbrown center-content clickable" id="slowJamzinfo" onclick="toggleSlowJamz()">
+          <p2>Slow Jamz</p2>
+          <p3>5:16</p3>
+        </div>
+      </div>
+      <div class="song red center-content hidden" id="throughTheWire" onclick="toggleTTW()">
+        <div class="acoversmall tcdbrown center-content">
+          <img src="images/TCD.png" />
+        </div>
+        <div class="songinfo tcdbrown center-content clickable">
+          <p2> Through The Wire</p2>
+          <p3>3:41</p3>
+        </div>
+      </div>
+      <div class="album brown center-content">
+        <div class="acoverbig lrbrown center-content">
+          <img src="images/LR.png" class="lrborder" />
+        </div>
+        <div
+          class="ainfo lrbrown center-content clickable"
+          id="LR"
+          onclick="LRSongs()"
+        >
+          <p1
+            >
+            "Late Registration" Kanye's second album and the second of the
+            three college-related releases, was launched on August 30th, 2005.
+            It maintains the distinctive style introduced in "The College
+            Dropout," seamlessly blending Kanye's lyricism with remarkable
+            samples. The album not only builds upon the success of its
+            predecessor but also elevates Kanye's artistic expression to new
+            heights. The seamless fusion of diverse musical elements and Kanye's
+            insightful storytelling further cements this album as a pivotal work
+            in his discography.
+          </p1>
+        </div>
+      </div>
+      <div class="song brown center-content hidden" id="touchTheSky" >
+        <div class="acoversmall lrbrown center-content">
+          <img src="images/LR.png" />
+        </div>
+        <div class="songinfo lrbrown center-content clickable" onclick="toggleTTS()">
+          <p2> Touch The Sky</p2>
+          <p3>3:56</p3>
+        </div>
+      </div>
+      <div class="song brown hidden" id="goldDigger">
+        <div class="acoversmall lrbrown center-content">
+          <img src="images/LR.png" />
+        </div>
+        <div class="songinfo lrbrown center-content clickable" onclick="toggleGD()">
+          <p2>Gold Digger</p2>
+          <p3>3:27</p3>
+        </div>
+      </div>
+      <div class="song brown hidden" id="heyMama">
+        <div class="acoversmall lrbrown center-content">
+          <img src="images/LR.png" />
+        </div>
+        <div class="songinfo lrbrown center-content clickable" onclick="toggleHM()">
+          <p2>Hey Mama</p2>
+          <p3>5:05</p3>
+        </div>
+      </div>
+      <div class="album purple">
+        <div class="acoverbig gradpurple center-content">
+          <img src="images/graduation.jpg" class="gradborder" />
+        </div>
+        <div
+          class="ainfo gradpurple center-content clickable"
+          id="grad"
+          onclick="GradSongs()"
+        >
+          <p1>
+            "Graduation" is Kanye's third studio album and the final installment
+            in his college-themed trilogy. Known for its remarkable tracklist,
+            featuring catchy beats and uplifting tunes with positive messages,
+            "Graduation" solidified Kanye's reputation as a groundbreaking
+            artist. The album's innovative sound and genre-blending approach
+            marked a pivotal moment in hip-hop history.
+          </p1>
+        </div>
+      </div>
+      <div class="song purple hidden" id="champion">
+        <div class="acoversmall gradpurple center-content">
+          <img src="images/graduation.jpg" />
+        </div>
+        <div class="songinfo gradpurple center-content clickable" onclick="toggleChamp()">
+          <p2>Champion</p2>
+          <p3>2:47</p3>
+        </div>
+      </div>
+      <div class="song purple hidden" id="iWonder">
+        <div class="acoversmall gradpurple center-content">
+          <img src="images/graduation.jpg" />
+        </div>
+        <div class="songinfo gradpurple center-content clickable" onclick="toggleIW()">
+          <p2>I Wonder</p2>
+          <p3>4:03</p3>
+        </div>
+      </div>
+      <div class="song purple hidden" id="homecoming">
+        <div class="acoversmall gradpurple center-content">
+          <img src="images/graduation.jpg" />
+        </div>
+        <div class="songinfo gradpurple center-content clickable" onclick="toggleHC()">
+          <p2>Homecoming</p2>
+          <p3>3:23</p3>
+        </div>
+      </div>
+      <div class="album eoelight">
+        <div class="acoverbig eoeswhite center-content">
+          <img src="images/808s.png" class="eoeborder" />
+        </div>
+        <div
+          class="ainfo eoeswhite center-content clickable"
+          id="808s"
+          onclick="EOESongs()"
+        >
+          <p1>
+            "808s and Heartbreak" is Kanye's fourth studio album. It was
+            crafted shortly after his mother's death and his breakup with
+            then-fiancée Alexis Phifer. This marked a highly emotional period
+            for Kanye. In this album, instead of relying on sampled soul beats,
+            Kanye opts for a significant use of deep 808s, which was unheard of
+            at the time, revolutionizing the future of rap and inspiring the
+            album's title, "808s and Heartbreak"
+          </p1>
+        </div>
+      </div>
+      <div class="song eoelight hidden" id="heartless">
+        <div class="acoversmall eoeswhite center-content">
+          <img src="images/808s.png" />
+        </div>
+        <div class="songinfo eoeswhite center-content clickable" onclick="toggleHeart()">
+          <p2>Heartless</p2>
+          <p3>3:31</p3>
+        </div>
+      </div>
+      <div class="song eoelight hidden" id="paranoid">
+        <div class="acoversmall eoeswhite center-content">
+          <img src="images/808s.png" />
+        </div>
+        <div class="songinfo eoeswhite center-content clickable" onclick="togglePara()">
+          <p2> Paranoid</p2>
+          <p3>4:37</p3>
+        </div>
+      </div>
+      <div class="song eoelight hidden" id="streetLights">
+        <div class="acoversmall eoeswhite center-content">
+          <img src="images/808s.png" />
+        </div>
+        <div class="songinfo eoeswhite center-content clickable" onclick="toggleSL()">
+          <p2> Street Lights</p2>
+          <p3>3:09</p3>
+        </div>
+      </div>
+      <div class="album MBDTFlight">
+        <div class="acoverbig MBDTFred center-content">
+          <img src="images/mbdtf.jpg" class="mbdtfborder" />
+        </div>
+        <div
+          class="ainfo MBDTFred center-content clickable"
+          id="MBDTF"
+          onclick="MBDTFSongs()"
+        >
+          <p1>
+            "My Beautiful Dark Twisted Fantasy" stands as Kanye's fifth studio
+            album, released on November 22, 2010. Regarded as Kanye's magnum
+            opus, the album was meticulously crafted with a pursuit of
+            perfection, symbolized by his decision to fly out everyone he needed
+            to join him in Hawaii. Kanye's relentless drive pushed everyone,
+            including himself, to deliver their best, resulting in an
+            outstanding achievement reflected in the album's impressive average
+            Metacritic score of 94.
+          </p1>
+        </div>
+      </div>
+      <div class="song MBDTFlight hidden" id="gorgeous" >
+        <div class="acoversmall MBDTFred center-content">
+          <img src="images/mbdtf.jpg" />
+        </div>
+        <div class="songinfo MBDTFred center-content clickable" onclick="toggleGor()">
+          <p2>Gorgeous</p2>
+          <p3>5:57</p3>
+        </div>
+      </div>
+      <div class="song MBDTFlight hidden" id="devilInANewDress">
+        <div class="acoversmall MBDTFred center-content">
+          <img src="images/mbdtf.jpg" />
+        </div>
+        <div class="songinfo MBDTFred center-content clickable" onclick="toggleDIAND()">
+          <p2>Devil In A New Dress</p2>
+          <p3>5:51</p3>
+        </div>
+      </div>
+      <div class="song MBDTFlight hidden" id="runaway">
+        <div class="acoversmall MBDTFred center-content">
+          <img src="images/mbdtf.jpg" />
+        </div>
+        <div class="songinfo MBDTFred center-content clickable" onclick="toggleRun()">
+          <p2>Runaway</p2>
+          <p3>9:07</p3>
+        </div>
+      </div>
+      <div class="album wttlight">
+        <div class="acoverbig wttgold center-content">
+          <img src="images/WTT.png" class="wttborder" />
+        </div>
+        <div
+          class="ainfo wttgold center-content clickable"
+          id="WTT"
+          onclick="WTTSongs()"
+        >
+          <p1>
+            "Watch the Throne" marked a historic collaboration between Kanye
+            West and Jay-Z, two iconic figures in the hip-hop industry. The
+            album seamlessly blended their distinctive styles, delivering a
+            musical masterpiece that not only showcased their individual talents
+            but also set a new standard for collaborative projects in the genre.
+            With its stellar production, thought-provoking lyrics, and
+            commercial success, "Watch the Throne" solidified Kanye and Jay-Z's
+            status as trailblazers and innovators in the world of rap music.
+          </p1>
+        </div>
+      </div>
+      <div class="song wttlight hidden" id="noChurchInTheWild">
+        <div class="acoversmall wttgold center-content">
+          <img src="images/WTT.png" />
+        </div>
+        <div class="songinfo wttgold center-content clickable" onclick="toggleNCITW()">
+          <p2>No Church In The Wild</p2>
+          <p3>4:32</p3>
+        </div>
+      </div>
+      <div class="song wttlight hidden" id="niasInParis">
+        <div class="acoversmall wttgold center-content">
+          <img src="images/WTT.png" />
+        </div>
+        <div class="songinfo wttgold center-content clickable" onclick="toggleNIP()">
+          <p2>Fellas In Paris</p2>
+          <p3>3:39</p3>
+        </div>
+      </div>
+      <div class="song wttlight hidden" id="otis">
+        <div class="acoversmall wttgold center-content">
+          <img src="images/WTT.png" />
+        </div>
+        <div class="songinfo wttgold center-content clickable" onclick="toggleOtis()">
+          <p2>Otis</p2>
+          <p3>2:58</p3>
+        </div>
+      </div>
+      <div class="album yeelight">
+        <div class="acoverbig yeewhite center-content">
+          <img src="images/yeezus.png" class="yeeborder" />
+        </div>
+        <div
+          class="ainfo yeewhite center-content clickable"
+          id="yeezus"
+          onclick="YeeSongs()"
+        >
+          <p1>
+            "Yeezus" is Kanye's sixth studio album, released on June 18th, 2013.
+            Known for its very harsh beats, a characteristic best exemplified by
+            the album's opener "On Sight," Yeezus marked a bold departure from
+            conventional hip-hop production, showcasing Kanye's experimental and
+            boundary-pushing approach to music. The album's avant-garde sound
+            and unapologetic lyrics challenged industry norms, solidifying
+            Kanye's reputation as a fearless and innovative artist.
+          </p1>
+        </div>
+      </div>
+      <div class="song yeelight hidden" id="onSight">
+        <div class="acoversmall yeewhite center-content">
+          <img src="images/yeezus.png" />
+        </div>
+        <div class="songinfo yeewhite center-content clickable" onclick="toggleOS()">
+          <p2>On Sight</p2>
+          <p3>2:36</p3>
+        </div>
+      </div>
+      <div class="song yeelight hidden" id="blackSkinhead">
+        <div class="acoversmall yeewhite center-content">
+          <img src="images/yeezus.png" />
+        </div>
+        <div class="songinfo yeewhite center-content clickable" onclick="toggleBS()">
+          <p2>Black Skinhead</p2>
+          <p3>3:08</p3>
+        </div>
+      </div>
+      <div class="song yeelight hidden" id="newSlaves">
+        <div class="acoversmall yeewhite center-content">
+          <img src="images/yeezus.png" />
+        </div>
+        <div class="songinfo yeewhite center-content clickable" onclick="toggleNS()">
+          <p2>New Slaves</p2>
+          <p3>4:16</p3>
+        </div>
+      </div>
+      <div class="album tloplight">
+        <div class="acoverbig tloporange center-content">
+          <img src="images/tlop.png" class="tlopborder" />
+        </div>
+        <div
+          class="ainfo tloporange center-content clickable"
+          id="tlop"
+          onclick="TLOPSongs()"
+        >
+          <p1>
+            "The Life of Pablo" is Kanye's 7th studio album and was released on
+            February 14, 2016, and is a dynamic and controversial album that
+            reflects the tumultuous journey of its creator during its creation.
+            The fluidity mirrored the evolving nature of Kanye's artistic
+            vision. The album blends a variety of genres, from gospel and R&B to
+            hip-hop and electronic, showcasing Kanye's eclectic musical
+            influences. "The Life of Pablo" serves as a snapshot of Kanye West's
+            complex creative process and the intersection of his personal and
+            artistic evolution.
+          </p1>
+        </div>
+      </div>
+      <div class="song tloplight hidden" id="fatherStretchMyHandsPt1">
+        <div class="acoversmall tloporange center-content">
+          <img src="images/tlop.png" />
+        </div>
+        <div class="songinfo tloporange center-content clickable" onclick="toggleFSMH()">
+          <p2>Father Stretch My Hands Pt. 1</p2>
+          <p3>2:15</p3>
+        </div>
+      </div>
+      <div class="song tloplight hidden" id="wolve">
+        <div class="acoversmall tloporange center-content">
+          <img src="images/tlop.png" />
+        </div>
+        <div class="songinfo tloporange center-content clickable" onclick="toggleWolves()">
+          <p2>Wolves</p2>
+          <p3>5:01</p3>
+        </div>
+      </div>
+      <div class="song tloplight hidden" id="noMorePartiesInLa">
+        <div class="acoversmall tloporange center-content">
+          <img src="images/tlop.png" />
+        </div>
+        <div class="songinfo tloporange center-content clickable" onclick="toggleNMPIL()">
+          <p2>No More Parties In La</p2>
+          <p3>6:14</p3>
+        </div>
+      </div>
+      <div class="album yelight">
+        <div class="acoverbig yeblue center-content">
+          <img src="images/ye.png" class="yeborder" />
+        </div>
+        <div
+          class="ainfo yeblue center-content clickable"
+          id="ye"
+          onclick="YeSongs()"
+        >
+          <p1>
+            "Ye," was released on June 1, 2018, and is Kanye's 8th studio album,
+            a masterful creation that not only achieved massive success but also
+            served as a poignant exploration of sensitive subjects. On the album
+            cover, it boldly states "I hate being bipolar; it's awesome,"
+            offering a clear and unapologetic perspective on Kanye's personal
+            struggle with mental health and his bipolar disorder. The album's
+            raw and introspective nature not only resonated with audiences but
+            also sparked important conversations surrounding mental health in
+            the realm of popular culture.
+          </p1>
+        </div>
+      </div>
+      <div class="song yelight hidden" id="yike">
+        <div class="acoversmall yeblue center-content">
+          <img src="images/ye.png" />
+        </div>
+        <div class="songinfo yeblue center-content clickable" onclick="toggleYikes()">
+          <p2>Yikes</p2>
+          <p3>3:08</p3>
+        </div>
+      </div>
+      <div class="song yelight hidden" id="ghostTown">
+        <div class="acoversmall yeblue center-content">
+          <img src="images/ye.png" />
+        </div>
+        <div class="songinfo yeblue center-content clickable" onclick="toggleGT()">
+          <p2>Ghost Town</p2>
+          <p3>4:31</p3>
+        </div>
+      </div>
+      <div class="song yelight hidden" id="violentCrimes">
+        <div class="acoversmall yeblue center-content">
+          <img src="images/ye.png" />
+        </div>
+        <div class="songinfo yeblue center-content clickable" onclick="toggleVC()">
+          <p2>Violent Crimes</p2>
+          <p3>3:35</p3>
+        </div>
+      </div>
+      <div class="album jiklight">
+        <div class="acoverbig jikblue center-content">
+          <img src="images/JIK.png" class="jikborder" />
+        </div>
+        <div
+          class="ainfo jikblue center-content clickable"
+          id="JIK"
+          onclick="JIKSongs()"
+        >
+          <p1>
+            "Jesus Is King" is Kanye's ninth studio album, released on October
+            25, 2019. This gospel-inspired album represents a significant
+            departure from Kanye's previous works, focusing on faith,
+            Christianity, and his spiritual journey. Known for its uplifting and
+            soulful sound, the album features gospel choirs, religious
+            references, and no explicit content, marking a notable shift in
+            Kanye's musical and lyrical direction. "Jesus Is King" stands as a
+            testament to Kanye's evolving work and his exploration of
+            spirituality in his music.
+          </p1>
+        </div>
+      </div>
+      <div class="song jiklight hidden" id="selah">
+        <div class="acoversmall jikblue center-content">
+          <img src="images/JIK.png" />
+        </div>
+        <div class="songinfo jikblue center-content clickable" onclick="toggleSE()">
+          <p2>Selah</p2>
+          <p3>2:44</p3>
+        </div>
+      </div>
+      <div class="song jiklight hidden" id="followGod">
+        <div class="acoversmall jikblue center-content">
+          <img src="images/JIK.png" />
+        </div>
+        <div class="songinfo jikblue center-content clickable" onclick="toggleFG()">
+          <p2>Follow God</p2>
+          <p3>1:44</p3>
+        </div>
+      </div>
+      <div class="song jiklight hidden" id="godIs">
+        <div class="acoversmall jikblue center-content">
+          <img src="images/JIK.png" />
+        </div>
+        <div class="songinfo jikblue center-content clickable" onclick="toggleGI()">
+          <p2>God Is</p2>
+          <p3>3:23</p3>
+        </div>
+      </div>
+
+      <div class="album dondalight">
+        <div class="acoverbig dondablack whiteborder center-content">
+          <img src="images/Donda.png" class="dondaborder" />
+        </div>
+        <div
+          class="ainfo dondablack whiteborder center-content clickable"
+          id="donda"
+          onclick="DondaSongs()"
+        >
+          <p1>
+            <span style="color: white">
+              "Donda" is Kanye's tenth album, released on August 29, 2021. Named
+              after his late mother, the project explores themes of family,
+              loss, and personal experiences. With a mix of genres and notable
+              collaborations, the album showcases Kanye's innovation in music
+              production. Despite mixed reviews, "Donda" stands as a significant
+              addition to Kanye's discography, reflecting his ongoing artistic
+              evolution in contemporary hip-hop. The album's eclectic sound and
+              collaborations contribute to its dynamic nature, making it a
+              noteworthy and multifaceted piece in Kanye's musical journey.
+            </span>
+          </p1>
+        </div>
+      </div>
+      <div class="song dondalight hidden" id="offTheGrid">
+        <div class="acoversmall dondablack whiteborder center-content">
+          <img src="images/Donda.png" class="dondaborder" />
+        </div>
+        <div class="songinfo dondablack whiteborder center-content clickable" onclick="toggleOTG()">
+          <p2>
+            <span style="color: white"> Off The Grid
+            </span>
+            </p2>
+          <p3>
+            <span style="color: white"> 5:39
+            </span>
+            </p3>
+        </div>
+      </div>
+
+      <div class="song dondalight hidden" id="praiseGod">
+        <div class="acoversmall dondablack whiteborder center-content">
+          <img src="images/Donda.png" class="dondaborder" />
+        </div>
+        <div class="songinfo dondablack whiteborder center-content clickable" onclick="togglePG()">
+          <p2>
+            <span style="color: white"> Praise God
+            </span>
+            </p2>
+          <p3>
+            <span style="color: white"> 3:46
+            </span>
+            </p3>
+        </div>
+      </div>
+      <div class="song dondalight hidden" id="heavenAndHell">
+        <div class="acoversmall dondablack whiteborder center-content">
+          <img src="images/Donda.png" class="dondaborder" />
+        </div>
+        <div class="songinfo dondablack whiteborder center-content clickable" onclick="toggleHAH()">
+          <p2>
+            <span style="color: white"> Heaven And Hell
+            </span>
+            </p2>
+          <p3>
+            <span style="color: white"> 2:25
+            </span>
+            </p3>
+        </div>
+      </div>
+    </div>
+    <audio src="audio/weDontCare.mp3" id="WDC"></audio>
+    <audio src="audio/slowJamz.mp3" id="SJ"></audio>
+    <audio src="audio/throughTheWire.mp3" id="TTW"></audio>
+    <audio src="audio/touchTheSky.mp3" id="TTS"></audio>
+    <audio src="audio/goldDigger.mp3" id="GD"></audio>
+    <audio src="audio/heyMama.mp3" id="HM"></audio>
+    <audio src="audio/Champion.mp3" id="Champ"></audio>
+    <audio src="audio/iWonder.mp3" id="IW"></audio>
+    <audio src="audio/homecoming.mp3" id="HC"></audio>
+    <audio src="audio/heartless.mp3" id="Heart"></audio>
+    <audio src="audio/paranoid.mp3" id="Para"></audio>
+    <audio src="audio/streetLights.mp3" id="SL"></audio>
+    <audio src="audio/gorgeous.mp3" id="gor"></audio>
+    <audio src="audio/devilInANewDress.mp3" id="DIAND"></audio>
+    <audio src="audio/runaway.mp3" id="Run"></audio>
+    <audio src="audio/noChurchInTheWild.mp3" id="NCITW"></audio>
+    <audio src="audio/fellasInParis.mp3" id="NIP"></audio>
+    <audio src="audio/otis.mp3" id="otis"></audio>
+    <audio src="audio/onSight.mp3" id="OS"></audio>
+    <audio src="audio/blackSkinhead.mp3" id="BS"></audio>
+    <audio src="audio/newSlaves.mp3" id="NS"></audio>
+    <audio src="audio/FSMH.mp3" id="FSMH"></audio>
+    <audio src="audio/wolves.mp3" id="Wolves"></audio>
+    <audio src="audio/NMPIL.mp3" id="NMPIL"></audio>
+    <audio src="audio/yikes.mp3" id="Yikes"></audio>
+    <audio src="audio/ghostTown.mp3" id="GT"></audio>
+    <audio src="audio/violentCrimes.mp3" id="VC"></audio>
+    <audio src="audio/selah.mp3" id="SE"></audio>
+    <audio src="audio/followGod.mp3" id="FG"></audio>
+    <audio src="audio/godIs.mp3" id="GI"></audio>
+    <audio src="audio/offTheGrid.mp3" id="OTG"></audio>
+    <audio src="audio/praiseGod.mp3" id="PG"></audio>
+    <audio src="audio/heavenAndHell.mp3" id="HAH"></audio>
+    <audio src="audio/brokeBroke.mp3" id="BB"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
